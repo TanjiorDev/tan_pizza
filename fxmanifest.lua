@@ -4,7 +4,7 @@ game 'gta5'
 lua54 'yes'
 
 name 'tan_pizza_tempjob'
-author 'TanjiroDev x ChatGPT'
+author 'TanjiroDev'
 description 'Job intérimaire de livraison de pizzas (ox_lib/ox_target/ox_inventory)'
 version '1.0.0'
 
@@ -24,3 +24,4 @@ server_scripts {
 }
 
 dependencies { 'ox_lib', 'ox_target', 'ox_inventory' }
+
