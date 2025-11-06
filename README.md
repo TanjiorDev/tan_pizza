@@ -45,31 +45,33 @@
 # ─────────────────────────────────────────────────────────────────────────────
 # items_ox_inventory.lua (exemple pour data/items.lua)
 # ─────────────────────────────────────────────────────────────────────────────
--- À coller dans votre items.lua de ox_inventory
-    ['pizza_ham_box'] = {
-        label = 'Pizza Jambon',
-        weight = 250, -- poids de l’item en grammes
-        stack = true, -- peut se stacker
-        close = true, -- ferme l’inventaire à l’utilisation
-        description = 'Une pizza au jambon encore chaude, prête à être livrée 🍕',
-        client = {
-            image = 'pizza_ham_box.png', -- image à placer dans ox_inventory/web/images/
-            usetime = 2500, -- durée d’utilisation en ms
-            anim = {
-                dict = 'mp_player_inteat@burger',
-                clip = 'mp_player_int_eat_burger_fp'
-            },
-            status = { hunger = 200000 }, -- restaure la faim (si ox_status ou esx_status)
-            notification = {
-                title = 'Pizza',
-                description = 'Tu dégustes une délicieuse pizza au jambon 🍕',
-                type = 'success'
-            }
+-- 🍕 À coller dans data/items.lua
+['pizza_ham_box'] = {
+    label = 'Pizza Jambon',
+    weight = 250, -- poids de l’item en grammes
+    stack = true, -- peut se stacker
+    close = true, -- ferme l’inventaire à l’utilisation
+    description = 'Une pizza au jambon encore chaude, prête à être livrée 🍕',
+    client = {
+        image = 'pizza_ham_box.png', -- image à placer dans ox_inventory/web/images/
+        usetime = 2500, -- durée d’utilisation en ms
+        anim = {
+            dict = 'mp_player_inteat@burger',
+            clip = 'mp_player_int_eat_burger_fp'
         },
-        server = {
-            export = 'tan_pizza:eatPizza' -- optionnel (supprime-le si inutilisé)
+        status = {
+            hunger = 200000 -- restaure la faim (si ox_status ou esx_status)
+        },
+        notification = {
+            title = 'Pizza',
+            description = 'Tu dégustes une délicieuse pizza au jambon 🍕',
+            type = 'success'
         }
     },
+    server = {
+        export = 'tan_pizza:eatPizza' -- optionnel (supprime-le si inutilisé)
+    }
+},
 
 -- (optionnel) si fallback argent en item
 ['money'] = {
@@ -77,8 +79,9 @@
     weight = 0,
     stack = true,
     close = false,
-    description = 'Billets.'
+    description = 'Billet(s) en liquide 💵'
 },
+
 
 # ─────────────────────────────────────────────────────────────────────────────
 # items_esx.sql (optionnel si vous utilisez encore la table items ESX en parallèle)
@@ -86,3 +89,4 @@
 INSERT INTO items (name, label) VALUES
 
 ('pizza_box', 'Boîte de pizza');
+
