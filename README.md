@@ -46,6 +46,7 @@
 # items_ox_inventory.lua (exemple pour data/items.lua)
 # ─────────────────────────────────────────────────────────────────────────────
 -- 🍕 À coller dans data/items.lua
+ ```
 ['pizza_ham_box'] = {
     label = 'Pizza Jambon',
     weight = 250, -- poids de l’item en grammes
@@ -81,7 +82,7 @@
     close = false,
     description = 'Billet(s) en liquide 💵'
 },
-
+ ```
 
 # ─────────────────────────────────────────────────────────────────────────────
 # items_esx.sql (optionnel si vous utilisez encore la table items ESX en parallèle)
@@ -89,4 +90,5 @@
 INSERT INTO items (name, label) VALUES
 
 ('pizza_box', 'Boîte de pizza');
+
 
